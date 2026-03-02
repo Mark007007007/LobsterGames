@@ -1,0 +1,125 @@
+# ==========================================
+# =============== UNITY ====================
+# ==========================================
+
+# Generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# Crash reports
+sysinfo.txt
+
+# Auto-generated VS / Rider files
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.sln.dotsettings
+*.tmp
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ==========================================
+# ========== IDE / EDITOR FILES ============
+# ==========================================
+
+.vs/
+.idea/
+*.DotSettings.user
+
+# ==========================================
+# ============== OS FILES ==================
+# ==========================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+
+# ==========================================
+# ========== BUILD ARTIFACTS ===============
+# ==========================================
+
+*.apk
+*.aab
+*.unitypackage
+*.exe
+*.app
+*.x86
+*.x86_64
+*.wasm
+*.data
+*.symbols.zip
+
+# ==========================================
+# ========== OPTIONAL LARGE EXPORTS ========
+# ==========================================
+
+# Uncomment ONLY if these are exported outputs,
+# NOT if they are real game assets inside Assets/
+
+# *.mp4
+# *.mov
+# *.avi
+# *.wav
+# *.zip
+# *.rar
+# *.7z
+
+# ==========================================
+# IMPORTANT: DO NOT IGNORE THESE
+# ==========================================
+
+# Do NOT ignore:
+# *.meta
+# Assets/
+# Packages/
+# ProjectSettings/
+# ==========================================
+# ========== SCHOOL VERSION (LIGHT) ========
+# ==========================================
+
+# Large 3D models
+*.fbx
+*.obj
+*.blend
+
+# Audio files
+*.wav
+*.mp3
+*.ogg
+
+# Large textures
+*.tif
+*.tiff
+*.psd
+
+# Asset store packages / zips
+*.zip
+*.rar
+*.7z
+
+# Optional: large planet assets folder (if not needed)
+Assets/Planets of the Solar System 3D/
+Assets/ImportedAssets/
+Assets/Aditional Assets/
+Assets/UnityTechnologies/
+
