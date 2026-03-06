@@ -74,7 +74,7 @@ namespace Game.Scripts.LiveObjects
             {
                 var tempRot = transform.rotation.eulerAngles;
                 tempRot.y += h * _speed / 2;
-                transform.rotation = Quaternion.Euler(tempRot);
+                transform.rotation = Quaternion.Euler(tempRot);//
             }
         }
 

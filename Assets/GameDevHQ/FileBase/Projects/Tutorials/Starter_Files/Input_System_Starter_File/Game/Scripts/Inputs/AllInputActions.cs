@@ -100,6 +100,42 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""InteractableEvent"",
+                    ""type"": ""Button"",
+                    ""id"": ""0525e222-28c7-4f24-b30f-1640589433c0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HackCameras"",
+                    ""type"": ""Button"",
+                    ""id"": ""8c62d6b9-d843-418f-a9e4-3d42c9435270"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=5)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlowUpTaxi"",
+                    ""type"": ""Button"",
+                    ""id"": ""60f6df9d-0e74-433f-ba81-e15c0c096e6e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EndAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""f90469ae-9e93-4754-b6a7-59a2afa97233"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -212,6 +248,50 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d991c992-4e47-43b9-bc65-de4c49ac53dd"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractableEvent"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f92dd62-adad-4ea0-957a-1bda7dad606b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HackCameras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""150e07f5-7a60-49a7-a341-190fede9e4d4"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlowUpTaxi"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""756710c3-e5cc-45cd-b2ac-b3adc5687dd7"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EndAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -221,6 +301,10 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        m_Player_InteractableEvent = m_Player.FindAction("InteractableEvent", throwIfNotFound: true);
+        m_Player_HackCameras = m_Player.FindAction("HackCameras", throwIfNotFound: true);
+        m_Player_BlowUpTaxi = m_Player.FindAction("BlowUpTaxi", throwIfNotFound: true);
+        m_Player_EndAction = m_Player.FindAction("EndAction", throwIfNotFound: true);
     }
 
     ~@AllInputActions()
@@ -302,6 +386,10 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
+    private readonly InputAction m_Player_InteractableEvent;
+    private readonly InputAction m_Player_HackCameras;
+    private readonly InputAction m_Player_BlowUpTaxi;
+    private readonly InputAction m_Player_EndAction;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -317,6 +405,22 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Movement".
         /// </summary>
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/InteractableEvent".
+        /// </summary>
+        public InputAction @InteractableEvent => m_Wrapper.m_Player_InteractableEvent;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/HackCameras".
+        /// </summary>
+        public InputAction @HackCameras => m_Wrapper.m_Player_HackCameras;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/BlowUpTaxi".
+        /// </summary>
+        public InputAction @BlowUpTaxi => m_Wrapper.m_Player_BlowUpTaxi;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/EndAction".
+        /// </summary>
+        public InputAction @EndAction => m_Wrapper.m_Player_EndAction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -346,6 +450,18 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @InteractableEvent.started += instance.OnInteractableEvent;
+            @InteractableEvent.performed += instance.OnInteractableEvent;
+            @InteractableEvent.canceled += instance.OnInteractableEvent;
+            @HackCameras.started += instance.OnHackCameras;
+            @HackCameras.performed += instance.OnHackCameras;
+            @HackCameras.canceled += instance.OnHackCameras;
+            @BlowUpTaxi.started += instance.OnBlowUpTaxi;
+            @BlowUpTaxi.performed += instance.OnBlowUpTaxi;
+            @BlowUpTaxi.canceled += instance.OnBlowUpTaxi;
+            @EndAction.started += instance.OnEndAction;
+            @EndAction.performed += instance.OnEndAction;
+            @EndAction.canceled += instance.OnEndAction;
         }
 
         /// <summary>
@@ -360,6 +476,18 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @InteractableEvent.started -= instance.OnInteractableEvent;
+            @InteractableEvent.performed -= instance.OnInteractableEvent;
+            @InteractableEvent.canceled -= instance.OnInteractableEvent;
+            @HackCameras.started -= instance.OnHackCameras;
+            @HackCameras.performed -= instance.OnHackCameras;
+            @HackCameras.canceled -= instance.OnHackCameras;
+            @BlowUpTaxi.started -= instance.OnBlowUpTaxi;
+            @BlowUpTaxi.performed -= instance.OnBlowUpTaxi;
+            @BlowUpTaxi.canceled -= instance.OnBlowUpTaxi;
+            @EndAction.started -= instance.OnEndAction;
+            @EndAction.performed -= instance.OnEndAction;
+            @EndAction.canceled -= instance.OnEndAction;
         }
 
         /// <summary>
@@ -407,5 +535,33 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMovement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "InteractableEvent" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteractableEvent(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "HackCameras" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHackCameras(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "BlowUpTaxi" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBlowUpTaxi(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "EndAction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEndAction(InputAction.CallbackContext context);
     }
 }

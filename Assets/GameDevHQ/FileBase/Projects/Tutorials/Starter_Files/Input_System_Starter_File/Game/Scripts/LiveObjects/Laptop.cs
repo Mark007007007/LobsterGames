@@ -20,13 +20,13 @@ namespace Game.Scripts.LiveObjects
         [SerializeField]
         private InteractableZone _interactableZone;
 
-        public static event Action onHackComplete;//
-        public static event Action onHackEnded;//
+        public static event Action onHackComplete;
+        public static event Action onHackEnded;
 
-        private void OnEnable()//
+        private void OnEnable()
         {
             InteractableZone.onHoldStarted += InteractableZone_onHoldStarted;
-            InteractableZone.onHoldEnded += InteractableZone_onHoldEnded;
+            //InteractableZone.onHoldEnded += InteractableZone_onHoldEnded; LINE REMOVED
         }
 
         private void Update()
@@ -111,7 +111,7 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onHoldStarted -= InteractableZone_onHoldStarted;
-            InteractableZone.onHoldEnded -= InteractableZone_onHoldEnded;
+            //InteractableZone.onHoldEnded -= InteractableZone_onHoldEnded; LINE REMOVED
         }
     }
 

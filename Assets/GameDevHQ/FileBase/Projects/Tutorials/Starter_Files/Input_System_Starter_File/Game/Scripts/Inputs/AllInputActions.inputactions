@@ -14,6 +14,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "InteractableEvent",
+                    "type": "Button",
+                    "id": "0525e222-28c7-4f24-b30f-1640589433c0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HackCameras",
+                    "type": "Button",
+                    "id": "8c62d6b9-d843-418f-a9e4-3d42c9435270",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=5)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlowUpTaxi",
+                    "type": "Button",
+                    "id": "60f6df9d-0e74-433f-ba81-e15c0c096e6e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EndAction",
+                    "type": "Button",
+                    "id": "f90469ae-9e93-4754-b6a7-59a2afa97233",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -126,6 +162,50 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d991c992-4e47-43b9-bc65-de4c49ac53dd",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractableEvent",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f92dd62-adad-4ea0-957a-1bda7dad606b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HackCameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "150e07f5-7a60-49a7-a341-190fede9e4d4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlowUpTaxi",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "756710c3-e5cc-45cd-b2ac-b3adc5687dd7",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
