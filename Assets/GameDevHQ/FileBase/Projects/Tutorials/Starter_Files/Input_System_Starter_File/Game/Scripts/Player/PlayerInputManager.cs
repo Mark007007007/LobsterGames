@@ -1,3 +1,4 @@
+using Game.Scripts.LiveObjects;
 using Game.Scripts.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,10 +7,12 @@ public class PlayerInputManager : MonoBehaviour// NEW INPUT SYSTEM
 {
     private AllInputActions _input;
     [SerializeField] private Player _player;
+    [SerializeField] private Drone _drone;
     void Start()
     {
         _input = new AllInputActions();
         _input.Player.Enable();
+        _input.Player.DroneState.performed += DroneState_performed;
     }
     void Update()
     {
@@ -18,6 +21,29 @@ public class PlayerInputManager : MonoBehaviour// NEW INPUT SYSTEM
         _player.CalcutateMovement(x,y);
     }
 
+    private void DroneState_performed(InputAction.CallbackContext context)
+    {
+        _drone.EnterFlightMode();
+    }
+
+    public void EnablePlayerInput()
+    {
+        _input.Player.Enable();
+    }
+
+    public void DisablePlayerInput()
+    {
+        _input.Player.Disable();
+    }
+
+    private void OnDisable()
+    {
+        if (_input != null)
+        {   
+            _input.Player.DroneState.performed -= DroneState_performed;
+            _input.Player.Disable();
+        }
+    }
     private void OnDestroy()
     {
         if (_input != null)

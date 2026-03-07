@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,6 +29,8 @@ namespace Game.Scripts.UI
         [SerializeField]
         private RawImage _droneCamView;
 
+        [SerializeField] TextMeshProUGUI _droneSwitch_UI;
+
         private void Awake()
         {
             _instance = this;
@@ -48,6 +51,21 @@ namespace Game.Scripts.UI
         {
             _droneCamView.enabled = Active;
         }
+
+        // ADDED
+        public void EnableDroneSwitch_UI()
+        {
+            _droneSwitch_UI.gameObject.SetActive(true);
+            StartCoroutine(DisableDroneSwitch_UI());
+        }
+
+        // ADDED
+        IEnumerator DisableDroneSwitch_UI()
+        {
+            yield return new WaitForSeconds(5f);
+            _droneSwitch_UI.gameObject.SetActive(false);
+        }
+
     }
 }
 

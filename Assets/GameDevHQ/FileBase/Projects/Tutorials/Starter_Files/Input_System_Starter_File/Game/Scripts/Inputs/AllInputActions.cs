@@ -136,6 +136,15 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DroneState"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8489c23-a470-404c-846d-eb7b2b2e7a5d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -292,6 +301,224 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""EndAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95a2a3ca-ded5-4a09-b8cf-cea8372011e0"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DroneState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Drone"",
+            ""id"": ""0598fd76-90c2-4b2e-9e2e-147989177f2a"",
+            ""actions"": [
+                {
+                    ""name"": ""PlayerState"",
+                    ""type"": ""Button"",
+                    ""id"": ""4be3f0ef-a3b0-4ef8-bfdd-f2047c1b4431"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TiltDrone"",
+                    ""type"": ""Value"",
+                    ""id"": ""d01b902f-f566-4383-b878-2506ea9d3f5e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Thrust"",
+                    ""type"": ""Value"",
+                    ""id"": ""becc2897-7ead-4582-b9a0-958106c9eeaa"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""d3a53a91-6a85-4724-97ae-2bfff6c5f833"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""DisableDroneSwitch_UI"",
+                    ""type"": ""Button"",
+                    ""id"": ""42482575-fa5c-4c8f-9063-c3a76bdad25c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b5d324c6-025b-4b21-8fee-ee3c78da2595"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6c93f94-6b04-4a57-99ec-36b6086cd8a1"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""f247c87b-6cd7-4836-8b22-d77396663a76"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""51bde9ad-bd47-4276-9cd1-2d1da4153d8a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""3522e4f4-25aa-469f-b591-36cca203a332"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Right"",
+                    ""id"": ""72dff168-33c8-4442-8d8f-1a02310f52aa"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""2bac3422-f2cf-4d22-8721-41d52218a314"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""82007ca3-5ca1-42e3-ad40-32402b802095"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""394a4f8d-d280-4bdb-84bd-064ccb5dc9bb"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""9619b007-fc98-4d34-850c-db8af1e202d2"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""5b828ffd-7f6e-4ca1-8229-7f01ef09fad9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e01d5fa6-7eb2-49cb-8c4c-ea3400efcf92"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""903b054e-7e63-4d45-85ee-a243a0c37909"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe3191f1-174e-4357-8edd-2c82d85d70b0"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DisableDroneSwitch_UI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -305,11 +532,20 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         m_Player_HackCameras = m_Player.FindAction("HackCameras", throwIfNotFound: true);
         m_Player_BlowUpTaxi = m_Player.FindAction("BlowUpTaxi", throwIfNotFound: true);
         m_Player_EndAction = m_Player.FindAction("EndAction", throwIfNotFound: true);
+        m_Player_DroneState = m_Player.FindAction("DroneState", throwIfNotFound: true);
+        // Drone
+        m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
+        m_Drone_PlayerState = m_Drone.FindAction("PlayerState", throwIfNotFound: true);
+        m_Drone_TiltDrone = m_Drone.FindAction("TiltDrone", throwIfNotFound: true);
+        m_Drone_Thrust = m_Drone.FindAction("Thrust", throwIfNotFound: true);
+        m_Drone_Movement = m_Drone.FindAction("Movement", throwIfNotFound: true);
+        m_Drone_DisableDroneSwitch_UI = m_Drone.FindAction("DisableDroneSwitch_UI", throwIfNotFound: true);
     }
 
     ~@AllInputActions()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, AllInputActions.Player.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Drone.enabled, "This will cause a leak and performance issues, AllInputActions.Drone.Disable() has not been called.");
     }
 
     /// <summary>
@@ -390,6 +626,7 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_HackCameras;
     private readonly InputAction m_Player_BlowUpTaxi;
     private readonly InputAction m_Player_EndAction;
+    private readonly InputAction m_Player_DroneState;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -421,6 +658,10 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/EndAction".
         /// </summary>
         public InputAction @EndAction => m_Wrapper.m_Player_EndAction;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/DroneState".
+        /// </summary>
+        public InputAction @DroneState => m_Wrapper.m_Player_DroneState;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -462,6 +703,9 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @EndAction.started += instance.OnEndAction;
             @EndAction.performed += instance.OnEndAction;
             @EndAction.canceled += instance.OnEndAction;
+            @DroneState.started += instance.OnDroneState;
+            @DroneState.performed += instance.OnDroneState;
+            @DroneState.canceled += instance.OnDroneState;
         }
 
         /// <summary>
@@ -488,6 +732,9 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @EndAction.started -= instance.OnEndAction;
             @EndAction.performed -= instance.OnEndAction;
             @EndAction.canceled -= instance.OnEndAction;
+            @DroneState.started -= instance.OnDroneState;
+            @DroneState.performed -= instance.OnDroneState;
+            @DroneState.canceled -= instance.OnDroneState;
         }
 
         /// <summary>
@@ -521,6 +768,146 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
     /// </summary>
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Drone
+    private readonly InputActionMap m_Drone;
+    private List<IDroneActions> m_DroneActionsCallbackInterfaces = new List<IDroneActions>();
+    private readonly InputAction m_Drone_PlayerState;
+    private readonly InputAction m_Drone_TiltDrone;
+    private readonly InputAction m_Drone_Thrust;
+    private readonly InputAction m_Drone_Movement;
+    private readonly InputAction m_Drone_DisableDroneSwitch_UI;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Drone".
+    /// </summary>
+    public struct DroneActions
+    {
+        private @AllInputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public DroneActions(@AllInputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/PlayerState".
+        /// </summary>
+        public InputAction @PlayerState => m_Wrapper.m_Drone_PlayerState;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/TiltDrone".
+        /// </summary>
+        public InputAction @TiltDrone => m_Wrapper.m_Drone_TiltDrone;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/Thrust".
+        /// </summary>
+        public InputAction @Thrust => m_Wrapper.m_Drone_Thrust;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/Movement".
+        /// </summary>
+        public InputAction @Movement => m_Wrapper.m_Drone_Movement;
+        /// <summary>
+        /// Provides access to the underlying input action "Drone/DisableDroneSwitch_UI".
+        /// </summary>
+        public InputAction @DisableDroneSwitch_UI => m_Wrapper.m_Drone_DisableDroneSwitch_UI;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Drone; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="DroneActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(DroneActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="DroneActions" />
+        public void AddCallbacks(IDroneActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DroneActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DroneActionsCallbackInterfaces.Add(instance);
+            @PlayerState.started += instance.OnPlayerState;
+            @PlayerState.performed += instance.OnPlayerState;
+            @PlayerState.canceled += instance.OnPlayerState;
+            @TiltDrone.started += instance.OnTiltDrone;
+            @TiltDrone.performed += instance.OnTiltDrone;
+            @TiltDrone.canceled += instance.OnTiltDrone;
+            @Thrust.started += instance.OnThrust;
+            @Thrust.performed += instance.OnThrust;
+            @Thrust.canceled += instance.OnThrust;
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @DisableDroneSwitch_UI.started += instance.OnDisableDroneSwitch_UI;
+            @DisableDroneSwitch_UI.performed += instance.OnDisableDroneSwitch_UI;
+            @DisableDroneSwitch_UI.canceled += instance.OnDisableDroneSwitch_UI;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="DroneActions" />
+        private void UnregisterCallbacks(IDroneActions instance)
+        {
+            @PlayerState.started -= instance.OnPlayerState;
+            @PlayerState.performed -= instance.OnPlayerState;
+            @PlayerState.canceled -= instance.OnPlayerState;
+            @TiltDrone.started -= instance.OnTiltDrone;
+            @TiltDrone.performed -= instance.OnTiltDrone;
+            @TiltDrone.canceled -= instance.OnTiltDrone;
+            @Thrust.started -= instance.OnThrust;
+            @Thrust.performed -= instance.OnThrust;
+            @Thrust.canceled -= instance.OnThrust;
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @DisableDroneSwitch_UI.started -= instance.OnDisableDroneSwitch_UI;
+            @DisableDroneSwitch_UI.performed -= instance.OnDisableDroneSwitch_UI;
+            @DisableDroneSwitch_UI.canceled -= instance.OnDisableDroneSwitch_UI;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="DroneActions.UnregisterCallbacks(IDroneActions)" />.
+        /// </summary>
+        /// <seealso cref="DroneActions.UnregisterCallbacks(IDroneActions)" />
+        public void RemoveCallbacks(IDroneActions instance)
+        {
+            if (m_Wrapper.m_DroneActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="DroneActions.AddCallbacks(IDroneActions)" />
+        /// <seealso cref="DroneActions.RemoveCallbacks(IDroneActions)" />
+        /// <seealso cref="DroneActions.UnregisterCallbacks(IDroneActions)" />
+        public void SetCallbacks(IDroneActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DroneActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DroneActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="DroneActions" /> instance referencing this action map.
+    /// </summary>
+    public DroneActions @Drone => new DroneActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
     /// </summary>
@@ -563,5 +950,55 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEndAction(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DroneState" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDroneState(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Drone" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="DroneActions.AddCallbacks(IDroneActions)" />
+    /// <seealso cref="DroneActions.RemoveCallbacks(IDroneActions)" />
+    public interface IDroneActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "PlayerState" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayerState(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TiltDrone" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTiltDrone(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Thrust" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnThrust(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMovement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DisableDroneSwitch_UI" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDisableDroneSwitch_UI(InputAction.CallbackContext context);
     }
 }

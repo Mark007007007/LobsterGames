@@ -22,6 +22,8 @@ namespace Game.Scripts.Player
         [SerializeField]
         private GameObject _model;
 
+        [SerializeField] PlayerInputManager _playerInputManager;
+
 
         private void OnEnable()
         {
@@ -106,8 +108,10 @@ namespace Game.Scripts.Player
 
         private void ReleasePlayerControl()
         {
+
             _canMove = false;
             _followCam.Priority = 9;
+            _playerInputManager.DisablePlayerInput();
         }
 
         private void ReturnPlayerControl()
@@ -115,6 +119,7 @@ namespace Game.Scripts.Player
             _model.SetActive(true);
             _canMove = true;
             _followCam.Priority = 10;
+            _playerInputManager.EnablePlayerInput();
         }
 
         private void HidePlayer()

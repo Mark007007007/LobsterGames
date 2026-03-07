@@ -260,11 +260,6 @@ namespace Game.Scripts.LiveObjects
 
             if (_inventoryIcon != null)
                 UIManager.Instance.UpdateInventoryDisplay(_inventoryIcon);
-            
-            // if (_zoneID == 7)
-            // {
-            //     _input.Player.Disable();
-            // }
 
             onZoneInteractionComplete?.Invoke(this);
         }
