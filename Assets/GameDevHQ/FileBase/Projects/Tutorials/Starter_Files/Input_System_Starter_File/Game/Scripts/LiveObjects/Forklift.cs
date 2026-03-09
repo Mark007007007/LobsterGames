@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Cinemachine;
+using Unity.VisualScripting;
 
 namespace Game.Scripts.LiveObjects
 {
@@ -40,8 +41,12 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        private void ExitDriveMode()
+        public void ExitDriveMode()// CHANGED TO PUBLIC
         {
+            if (_inDriveMode == false)
+            {
+                return;
+            }
             _inDriveMode = false;
             _forkliftCam.Priority = 9;            
             _driverModel.SetActive(false);
@@ -49,22 +54,47 @@ namespace Game.Scripts.LiveObjects
             
         }
 
-        private void Update()
+        // LEGACY INPUT SYSTEM
+        // private void Update()
+        // {
+        //    if (_inDriveMode == true)
+        //     {
+        //         LiftControls();
+        //         CalcutateMovement();
+
+        //         if (Input.GetKey(KeyCode.Escape))
+        //         {
+        //             ExitDriveMode();
+        //         }
+        //     }
+        // }
+
+        // lEGACY INPUT SYSTEM
+        // private void CalcutateMovement()
+        // {
+        //     float h = Input.GetAxisRaw("Horizontal");
+        //     float v = Input.GetAxisRaw("Vertical");
+        //     var direction = new Vector3(0, 0, v);
+        //     var velocity = direction * _speed;
+
+        //     transform.Translate(velocity * Time.deltaTime);
+
+        //     if (Mathf.Abs(v) > 0)
+        //     {
+        //         var tempRot = transform.rotation.eulerAngles;
+        //         tempRot.y += h * _speed / 2;
+        //         transform.rotation = Quaternion.Euler(tempRot);//
+        //     }
+        // }
+
+        public void CalcutateMovement(float x, float y)// CHANGED
         {
-            if (_inDriveMode == true)
+            if (_inDriveMode == false)
             {
-                LiftControls();
-                CalcutateMovement();
-                if (Input.GetKeyDown(KeyCode.Escape))
-                    ExitDriveMode();
+                return;
             }
-
-        }
-
-        private void CalcutateMovement()
-        {
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
+            float h = x;
+            float v = y;
             var direction = new Vector3(0, 0, v);
             var velocity = direction * _speed;
 
@@ -78,37 +108,66 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        private void LiftControls()
-        {
-            if (Input.GetKey(KeyCode.R))
-                LiftUpRoutine();
-            else if (Input.GetKey(KeyCode.T))
-                LiftDownRoutine();
-        }
+        // lEGACY INPUT SYSTEM
+        // private void LiftControls()
+        // {
+        //     if (Input.GetKey(KeyCode.R))
+        //         LiftUpRoutine();
+        //     else if (Input.GetKey(KeyCode.T))
+        //         LiftDownRoutine();
+        // }
 
-        private void LiftUpRoutine()
+        public void LiftControls(float lift)// CHANGED
         {
-            if (_lift.transform.localPosition.y < _liftUpperLimit.y)
+            if (_inDriveMode == false)
+            {
+                return;
+            }
+            if (_lift.transform.localPosition.y < _liftUpperLimit.y - 0.01 && _lift.transform.localPosition.y > _liftLowerLimit.y + 0.01)
             {
                 Vector3 tempPos = _lift.transform.localPosition;
-                tempPos.y += Time.deltaTime * _liftSpeed;
+                tempPos.y += Time.deltaTime * _liftSpeed * lift;
+                Debug.Log("Y: " + tempPos.y);
                 _lift.transform.localPosition = new Vector3(tempPos.x, tempPos.y, tempPos.z);
             }
             else if (_lift.transform.localPosition.y >= _liftUpperLimit.y)
+            {
                 _lift.transform.localPosition = _liftUpperLimit;
+                Debug.Log("UpperLimit reached!");
+            }
+            
+            else if (_lift.transform.localPosition.y <= _liftUpperLimit.y)
+            {
+                _lift.transform.localPosition = _liftLowerLimit;
+                Debug.Log("LowerLimit reached!");
+            }
         }
 
-        private void LiftDownRoutine()
-        {
-            if (_lift.transform.localPosition.y > _liftLowerLimit.y)
-            {
-                Vector3 tempPos = _lift.transform.localPosition;
-                tempPos.y -= Time.deltaTime * _liftSpeed;
-                _lift.transform.localPosition = new Vector3(tempPos.x, tempPos.y, tempPos.z);
-            }
-            else if (_lift.transform.localPosition.y <= _liftUpperLimit.y)
-                _lift.transform.localPosition = _liftLowerLimit;
-        }
+        // lEGACY INPUT SYSTEM
+        // private void LiftUpRoutine()
+        // {
+        //     if (_lift.transform.localPosition.y < _liftUpperLimit.y)
+        //     {
+        //         Vector3 tempPos = _lift.transform.localPosition;
+        //         tempPos.y += Time.deltaTime * _liftSpeed;
+        //         _lift.transform.localPosition = new Vector3(tempPos.x, tempPos.y, tempPos.z);
+        //     }
+        //     else if (_lift.transform.localPosition.y >= _liftUpperLimit.y)
+        //         _lift.transform.localPosition = _liftUpperLimit;
+        // }
+
+        // lEGACY INPUT SYSTEM
+        // private void LiftDownRoutine()
+        // {
+        //     if (_lift.transform.localPosition.y > _liftLowerLimit.y)
+        //     {
+        //         Vector3 tempPos = _lift.transform.localPosition;
+        //         tempPos.y -= Time.deltaTime * _liftSpeed;
+        //         _lift.transform.localPosition = new Vector3(tempPos.x, tempPos.y, tempPos.z);
+        //     }
+        //     else if (_lift.transform.localPosition.y <= _liftUpperLimit.y)
+        //         _lift.transform.localPosition = _liftLowerLimit;
+        // }
 
         private void OnDisable()
         {
