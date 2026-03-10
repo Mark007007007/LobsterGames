@@ -59,6 +59,8 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
+        [SerializeField] private Crate _crate;
+
 
         public static event Action<InteractableZone> onZoneInteractionComplete;
         public static event Action<int> onHoldStarted;
@@ -70,9 +72,15 @@ namespace Game.Scripts.LiveObjects
         {
             _input = new AllInputActions();
             _input.Player.Enable();
+            if (_zoneID == 6)
+            {
+                _input.Player.BrakeCrate.performed += BrakeCrate_performed;
+                _input.Player.BrakeCrate.canceled += BrakeCrate_canceled;
+                return;
+            }
             if (_zoneID == 2)
             {
-                _input.Player.BlowUpTaxi.performed += InteractableEvent_performed;
+                _input.Player.BlowUpTaxi.performed += InteractableEvent_performed;// debug
                 return;
             }
             _input.Player.InteractableEvent.performed += InteractableEvent_performed;
@@ -92,6 +100,24 @@ namespace Game.Scripts.LiveObjects
         {
             InteractableZone.onZoneInteractionComplete += SetMarker;
 
+        }
+
+        private void BrakeCrate_performed(InputAction.CallbackContext context)// ADDED
+        {
+            if (_inZone == false)
+            {
+                return;
+            }
+            _crate.Break(5);
+        }
+
+        private void BrakeCrate_canceled(InputAction.CallbackContext context)// ADDED
+        {
+            if (_inZone == false)
+            {
+                return;
+            }
+            _crate.Break((int)context.duration + 1);
         }
 
         private void OnTriggerEnter(Collider other)

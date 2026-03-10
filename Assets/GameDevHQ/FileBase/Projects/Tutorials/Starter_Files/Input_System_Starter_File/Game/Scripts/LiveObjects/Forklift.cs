@@ -123,23 +123,20 @@ namespace Game.Scripts.LiveObjects
             {
                 return;
             }
-            if (_lift.transform.localPosition.y < _liftUpperLimit.y - 0.01 && _lift.transform.localPosition.y > _liftLowerLimit.y + 0.01)
+            if (_lift.transform.localPosition.y < _liftUpperLimit.y + 0.1 && _lift.transform.localPosition.y > _liftLowerLimit.y - 0.1)
             {
                 Vector3 tempPos = _lift.transform.localPosition;
                 tempPos.y += Time.deltaTime * _liftSpeed * lift;
-                Debug.Log("Y: " + tempPos.y);
                 _lift.transform.localPosition = new Vector3(tempPos.x, tempPos.y, tempPos.z);
             }
             else if (_lift.transform.localPosition.y >= _liftUpperLimit.y)
             {
                 _lift.transform.localPosition = _liftUpperLimit;
-                Debug.Log("UpperLimit reached!");
             }
             
             else if (_lift.transform.localPosition.y <= _liftUpperLimit.y)
             {
                 _lift.transform.localPosition = _liftLowerLimit;
-                Debug.Log("LowerLimit reached!");
             }
         }
 

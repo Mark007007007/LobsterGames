@@ -3167,6 +3167,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1808342870}
+  _crate: {fileID: 147778361}
 --- !u!1001 &198573547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8247,6 +8248,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 605505802}
+  _crate: {fileID: 0}
 --- !u!4 &482471386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5779097134961922744, guid: 1d553f90302742946bbf45996165949c, type: 3}
@@ -10215,6 +10217,7 @@ MonoBehaviour:
   _zoneKeyInput: 32
   _keyState: 0
   _marker: {fileID: 1331263896}
+  _crate: {fileID: 0}
 --- !u!1001 &565131287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17173,6 +17176,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1578479318}
+  _crate: {fileID: 0}
 --- !u!1 &967188505
 GameObject:
   m_ObjectHideFlags: 3
@@ -23672,6 +23676,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1583429342}
+  _crate: {fileID: 0}
 --- !u!1001 &1178759240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24880,6 +24885,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1840441541}
+  _crate: {fileID: 0}
 --- !u!4 &1277958657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5779097134961922744, guid: 1d553f90302742946bbf45996165949c, type: 3}
@@ -31939,6 +31945,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: dd2a94e6375f34604b717d100c70532d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100046, guid: dd2a94e6375f34604b717d100c70532d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -33911,6 +33921,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1041737524}
+  _crate: {fileID: 0}
 --- !u!1001 &1810757429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37419,6 +37430,7 @@ MonoBehaviour:
   _zoneKeyInput: 101
   _keyState: 1
   _marker: {fileID: 55150249}
+  _crate: {fileID: 0}
 --- !u!4 &2030128479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 83b308def8e254c558e3d7c4628b4fe2, type: 3}

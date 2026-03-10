@@ -8,6 +8,8 @@ public class PlayerInputManager : MonoBehaviour// NEW INPUT SYSTEM
     private AllInputActions _input;
     [SerializeField] private Player _player;
     [SerializeField] private Drone _drone;
+
+    [SerializeField] 
     void Start()
     {
         _input = new AllInputActions();

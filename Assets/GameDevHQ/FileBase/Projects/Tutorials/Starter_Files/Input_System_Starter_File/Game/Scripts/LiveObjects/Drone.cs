@@ -107,7 +107,6 @@ namespace Game.Scripts.LiveObjects
                 //CalculateTilt();
                 //CalculateMovementUpdate(); // THESE LINES ARE REMOVED
 
-                Debug.Log("Drone's Escape");
                 _inFlightMode = false;
                 onExitFlightmode?.Invoke();
                 droneInputManager.DisableInputManager();

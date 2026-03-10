@@ -145,6 +145,15 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BrakeCrate"",
+                    ""type"": ""Button"",
+                    ""id"": ""69f0aecf-d79e-430c-9785-3fba07411e0d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -310,6 +319,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""DroneState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd35640b-69d1-4862-96a8-7b8199eedb45"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Hold(duration=3)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BrakeCrate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -722,6 +742,7 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         m_Player_BlowUpTaxi = m_Player.FindAction("BlowUpTaxi", throwIfNotFound: true);
         m_Player_EndAction = m_Player.FindAction("EndAction", throwIfNotFound: true);
         m_Player_DroneState = m_Player.FindAction("DroneState", throwIfNotFound: true);
+        m_Player_BrakeCrate = m_Player.FindAction("BrakeCrate", throwIfNotFound: true);
         // Drone
         m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
         m_Drone_PlayerState = m_Drone.FindAction("PlayerState", throwIfNotFound: true);
@@ -822,6 +843,7 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_BlowUpTaxi;
     private readonly InputAction m_Player_EndAction;
     private readonly InputAction m_Player_DroneState;
+    private readonly InputAction m_Player_BrakeCrate;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -857,6 +879,10 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/DroneState".
         /// </summary>
         public InputAction @DroneState => m_Wrapper.m_Player_DroneState;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/BrakeCrate".
+        /// </summary>
+        public InputAction @BrakeCrate => m_Wrapper.m_Player_BrakeCrate;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -901,6 +927,9 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @DroneState.started += instance.OnDroneState;
             @DroneState.performed += instance.OnDroneState;
             @DroneState.canceled += instance.OnDroneState;
+            @BrakeCrate.started += instance.OnBrakeCrate;
+            @BrakeCrate.performed += instance.OnBrakeCrate;
+            @BrakeCrate.canceled += instance.OnBrakeCrate;
         }
 
         /// <summary>
@@ -930,6 +959,9 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
             @DroneState.started -= instance.OnDroneState;
             @DroneState.performed -= instance.OnDroneState;
             @DroneState.canceled -= instance.OnDroneState;
+            @BrakeCrate.started -= instance.OnBrakeCrate;
+            @BrakeCrate.performed -= instance.OnBrakeCrate;
+            @BrakeCrate.canceled -= instance.OnBrakeCrate;
         }
 
         /// <summary>
@@ -1270,6 +1302,13 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDroneState(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "BrakeCrate" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBrakeCrate(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Drone" which allows adding and removing callbacks.

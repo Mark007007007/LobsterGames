@@ -59,6 +59,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "BrakeCrate",
+                    "type": "Button",
+                    "id": "69f0aecf-d79e-430c-9785-3fba07411e0d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -224,6 +233,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "DroneState",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd35640b-69d1-4862-96a8-7b8199eedb45",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Hold(duration=3)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BrakeCrate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
