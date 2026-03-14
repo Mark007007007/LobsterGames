@@ -20,8 +20,7 @@ namespace Game.Scripts.LiveObjects
             InteractableZone.onZoneInteractionComplete += InteractableZone_onZoneInteractionComplete;
         }
 
-        // Changed
-
+        // Before
         // private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)
         // {
             
@@ -49,10 +48,11 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
+        // AFTER
         private void InteractableZone_onZoneInteractionComplete(InteractableZone zone)// Changed
         {
             
-            if (_isReadyToBreak == false && _brakeOff.Count >0)
+            if (_isReadyToBreak == false && _brakeOff.Count > 0)
             {
                 _wholeCrate.SetActive(false);
                 _brokenCrate.SetActive(true);

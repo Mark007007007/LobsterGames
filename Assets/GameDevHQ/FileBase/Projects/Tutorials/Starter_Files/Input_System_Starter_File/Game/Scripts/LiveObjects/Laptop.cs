@@ -29,31 +29,57 @@ namespace Game.Scripts.LiveObjects
             //InteractableZone.onHoldEnded += InteractableZone_onHoldEnded; LINE REMOVED
         }
 
-        private void Update()
+        // LEGACY INPUT MANAGER // BEFORE
+        // private void Update()
+        // {
+        //     if (_hacked == true)
+        //     {
+        //         if (Input.GetKeyDown(KeyCode.E))
+        //         {
+        //             var previous = _activeCamera;
+        //             _activeCamera++;
+
+
+        //             if (_activeCamera >= _cameras.Length)
+        //                 _activeCamera = 0;
+
+
+        //             _cameras[_activeCamera].Priority = 11;
+        //             _cameras[previous].Priority = 9;
+        //         }
+
+        //         if (Input.GetKeyDown(KeyCode.Escape))
+        //         {
+        //             _hacked = false;
+        //             onHackEnded?.Invoke();
+        //             ResetCameras();
+        //         }
+        //     }
+        // }
+
+        // FOR NEW INPUT SYSTEM // AFTER
+        public void SwitchCameras()
         {
             if (_hacked == true)
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    var previous = _activeCamera;
-                    _activeCamera++;
+                var previous = _activeCamera;
+                _activeCamera++;
+                if (_activeCamera >= _cameras.Length)
+                    _activeCamera = 0;
+                _cameras[_activeCamera].Priority = 11;
+                _cameras[previous].Priority = 9;
+            }
+        }
 
-
-                    if (_activeCamera >= _cameras.Length)
-                        _activeCamera = 0;
-
-
-                    _cameras[_activeCamera].Priority = 11;
-                    _cameras[previous].Priority = 9;
-                }
-
-                if (Input.GetKeyDown(KeyCode.Escape))
+        // FOR NEW INPUT SYSTEM // AFTER
+        public void StopUsingCameras()
+        {
+            if (_hacked == true)
                 {
                     _hacked = false;
                     onHackEnded?.Invoke();
                     ResetCameras();
                 }
-            }
         }
 
         void ResetCameras()

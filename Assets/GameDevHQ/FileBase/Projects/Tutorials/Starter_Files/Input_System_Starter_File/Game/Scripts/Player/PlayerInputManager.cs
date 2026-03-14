@@ -1,3 +1,4 @@
+using System;
 using Game.Scripts.LiveObjects;
 using Game.Scripts.Player;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class PlayerInputManager : MonoBehaviour// NEW INPUT SYSTEM
 
     [SerializeField] 
     void Start()
+    {
+        InitializeInputs();
+    }
+
+    private void InitializeInputs()
     {
         _input = new AllInputActions();
         _input.Player.Enable();

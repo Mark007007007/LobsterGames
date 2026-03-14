@@ -269,8 +269,30 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c4d8d754-91fc-4d5e-8547-de5e6b311689"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d991c992-4e47-43b9-bc65-de4c49ac53dd"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractableEvent"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df02351d-9452-4b15-905e-04304d10686f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -291,8 +313,30 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""69f7a77d-83a1-462b-af3f-8ae67e2e89e6"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HackCameras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""150e07f5-7a60-49a7-a341-190fede9e4d4"",
                     ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlowUpTaxi"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c8819f47-1336-44ad-97e9-618bf741018d"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -313,6 +357,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b24f643a-02ca-4777-8d66-551b49c1768a"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EndAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""95a2a3ca-ded5-4a09-b8cf-cea8372011e0"",
                     ""path"": ""<Keyboard>/h"",
                     ""interactions"": """",
@@ -324,8 +379,30 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""0c82c15f-1a21-458a-8971-cee0e7125aec"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DroneState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""dd35640b-69d1-4862-96a8-7b8199eedb45"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Hold(duration=3)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BrakeCrate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""37ae32d2-c5f8-407b-bfac-2bfb4bfcf30c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": ""Hold(duration=3)"",
                     ""processors"": """",
                     ""groups"": """",
@@ -409,6 +486,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""acf52942-5e8e-4817-baca-21233de07402"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""WASD"",
                     ""id"": ""f247c87b-6cd7-4836-8b22-d77396663a76"",
                     ""path"": ""2DVector"",
@@ -464,6 +552,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""24cb7bf0-8baa-4903-9773-b28112bdb069"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TiltDrone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""1D Axis"",
                     ""id"": ""82007ca3-5ca1-42e3-ad40-32402b802095"",
                     ""path"": ""1DAxis"",
@@ -497,6 +596,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""5319393e-336c-4e83-b852-3e838c19a6e6"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""1D Axis"",
                     ""id"": ""5b828ffd-7f6e-4ca1-8229-7f01ef09fad9"",
                     ""path"": ""1DAxis"",
@@ -528,6 +638,17 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Thrust"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2187a473-c3a0-482d-901a-6f3b26e0dad1"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Thrust"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -687,8 +808,30 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""cc350473-81af-4e2a-a4c1-9865d6ea25a6"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""f5725b2c-c47e-404b-912a-09e40d0aaf9f"",
                     ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GetOutOfForklift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abbc70a0-efdb-4941-b78e-bcb593bdde60"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -728,6 +871,109 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""LiftControl"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""8b1761ee-17ad-4ca2-9137-8b0b1a0cd468"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftControl"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""38908e12-16e8-432f-ac4f-450c8681aba1"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""527eaf1b-d9e2-49b2-919e-ab500d0c690d"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LiftControl"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""Laptop"",
+            ""id"": ""7077b698-e546-428c-ba71-14578d3ff487"",
+            ""actions"": [
+                {
+                    ""name"": ""SwitchCamreras"",
+                    ""type"": ""Button"",
+                    ""id"": ""eed46a93-bd17-4c62-a217-6110d39d8a02"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StopUsingCameras"",
+                    ""type"": ""Button"",
+                    ""id"": ""af4aba63-7729-4375-86f7-7969024482a3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f45f9a62-2ed1-4144-8634-910f6bf8fbbf"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchCamreras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4dcb1ae6-6321-4d91-923e-164845ee50cd"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchCamreras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48e94572-7cf4-48d5-a69c-3e8d390359f1"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StopUsingCameras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd6321f2-e88b-4f6b-9593-c312781f1cd9"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StopUsingCameras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -755,6 +1001,10 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         m_Forklift_Movement = m_Forklift.FindAction("Movement", throwIfNotFound: true);
         m_Forklift_GetOutOfForklift = m_Forklift.FindAction("GetOutOfForklift", throwIfNotFound: true);
         m_Forklift_LiftControl = m_Forklift.FindAction("LiftControl", throwIfNotFound: true);
+        // Laptop
+        m_Laptop = asset.FindActionMap("Laptop", throwIfNotFound: true);
+        m_Laptop_SwitchCamreras = m_Laptop.FindAction("SwitchCamreras", throwIfNotFound: true);
+        m_Laptop_StopUsingCameras = m_Laptop.FindAction("StopUsingCameras", throwIfNotFound: true);
     }
 
     ~@AllInputActions()
@@ -762,6 +1012,7 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, AllInputActions.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Drone.enabled, "This will cause a leak and performance issues, AllInputActions.Drone.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Forklift.enabled, "This will cause a leak and performance issues, AllInputActions.Forklift.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Laptop.enabled, "This will cause a leak and performance issues, AllInputActions.Laptop.Disable() has not been called.");
     }
 
     /// <summary>
@@ -1253,6 +1504,113 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="ForkliftActions" /> instance referencing this action map.
     /// </summary>
     public ForkliftActions @Forklift => new ForkliftActions(this);
+
+    // Laptop
+    private readonly InputActionMap m_Laptop;
+    private List<ILaptopActions> m_LaptopActionsCallbackInterfaces = new List<ILaptopActions>();
+    private readonly InputAction m_Laptop_SwitchCamreras;
+    private readonly InputAction m_Laptop_StopUsingCameras;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Laptop".
+    /// </summary>
+    public struct LaptopActions
+    {
+        private @AllInputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public LaptopActions(@AllInputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Laptop/SwitchCamreras".
+        /// </summary>
+        public InputAction @SwitchCamreras => m_Wrapper.m_Laptop_SwitchCamreras;
+        /// <summary>
+        /// Provides access to the underlying input action "Laptop/StopUsingCameras".
+        /// </summary>
+        public InputAction @StopUsingCameras => m_Wrapper.m_Laptop_StopUsingCameras;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Laptop; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="LaptopActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(LaptopActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="LaptopActions" />
+        public void AddCallbacks(ILaptopActions instance)
+        {
+            if (instance == null || m_Wrapper.m_LaptopActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_LaptopActionsCallbackInterfaces.Add(instance);
+            @SwitchCamreras.started += instance.OnSwitchCamreras;
+            @SwitchCamreras.performed += instance.OnSwitchCamreras;
+            @SwitchCamreras.canceled += instance.OnSwitchCamreras;
+            @StopUsingCameras.started += instance.OnStopUsingCameras;
+            @StopUsingCameras.performed += instance.OnStopUsingCameras;
+            @StopUsingCameras.canceled += instance.OnStopUsingCameras;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="LaptopActions" />
+        private void UnregisterCallbacks(ILaptopActions instance)
+        {
+            @SwitchCamreras.started -= instance.OnSwitchCamreras;
+            @SwitchCamreras.performed -= instance.OnSwitchCamreras;
+            @SwitchCamreras.canceled -= instance.OnSwitchCamreras;
+            @StopUsingCameras.started -= instance.OnStopUsingCameras;
+            @StopUsingCameras.performed -= instance.OnStopUsingCameras;
+            @StopUsingCameras.canceled -= instance.OnStopUsingCameras;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="LaptopActions.UnregisterCallbacks(ILaptopActions)" />.
+        /// </summary>
+        /// <seealso cref="LaptopActions.UnregisterCallbacks(ILaptopActions)" />
+        public void RemoveCallbacks(ILaptopActions instance)
+        {
+            if (m_Wrapper.m_LaptopActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="LaptopActions.AddCallbacks(ILaptopActions)" />
+        /// <seealso cref="LaptopActions.RemoveCallbacks(ILaptopActions)" />
+        /// <seealso cref="LaptopActions.UnregisterCallbacks(ILaptopActions)" />
+        public void SetCallbacks(ILaptopActions instance)
+        {
+            foreach (var item in m_Wrapper.m_LaptopActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_LaptopActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="LaptopActions" /> instance referencing this action map.
+    /// </summary>
+    public LaptopActions @Laptop => new LaptopActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
     /// </summary>
@@ -1381,5 +1739,27 @@ public partial class @AllInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLiftControl(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Laptop" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="LaptopActions.AddCallbacks(ILaptopActions)" />
+    /// <seealso cref="LaptopActions.RemoveCallbacks(ILaptopActions)" />
+    public interface ILaptopActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "SwitchCamreras" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchCamreras(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "StopUsingCameras" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStopUsingCameras(InputAction.CallbackContext context);
     }
 }

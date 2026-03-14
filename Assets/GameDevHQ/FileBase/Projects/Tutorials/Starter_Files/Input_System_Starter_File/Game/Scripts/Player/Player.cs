@@ -50,8 +50,7 @@ namespace Game.Scripts.Player
                 Debug.Log("Failed to connect the Animator");
         }
 
-        // LEGACY INPUT SYSTEM
-        // private void Update()
+        // private void Update() // REMOVED
         // {
         //     if (_canMove == true)
         //         CalcutateMovement();

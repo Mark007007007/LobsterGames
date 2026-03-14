@@ -5761,7 +5761,7 @@ Transform:
   m_GameObject: {fileID: 359860631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7823743, z: -0, w: 0.6228086}
-  m_LocalPosition: {x: -2.5, y: 0.371, z: -7.4}
+  m_LocalPosition: {x: -2.5, y: 1, z: -7.4}
   m_LocalScale: {x: 0.77586, y: 0.77586, z: 0.77586}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15149,51 +15149,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2825158248505566826, guid: eb469f7767c8d4c62a31578a58b0129d, type: 3}
   m_PrefabInstance: {fileID: 1096566375}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &852906781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 852906783}
-  - component: {fileID: 852906782}
-  m_Layer: 0
-  m_Name: LaptopManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &852906782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852906781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57811a069e1217447bae5748eca1d97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaptopInputManager
-  _laptop: {fileID: 816558616}
---- !u!4 &852906783
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852906781}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -245.85767, y: 0, z: -120.1409}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &854125195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18845,8 +18800,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Now, You can switch b/w Player and Drone pressing P for Player [east button
-    in Gamepad] and H for Drone [north button in Gamepad]'
+  m_text: Now, You can switch btw Player and Drone pressing P for Player and H for
+    Drone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18873,8 +18828,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24623,7 +24578,7 @@ Transform:
   m_GameObject: {fileID: 1266060212}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7823743, z: -0, w: 0.6228086}
-  m_LocalPosition: {x: -1.4816443, y: 1.6010001, z: -6.6526365}
+  m_LocalPosition: {x: -1.4816443, y: 2.23, z: -6.6526365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29448,7 +29403,7 @@ Transform:
   m_GameObject: {fileID: 1550399100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7823743, z: 0, w: 0.6228086}
-  m_LocalPosition: {x: -1.4816443, y: 1.6010001, z: -6.6526365}
+  m_LocalPosition: {x: -1.4816443, y: 2.23, z: -6.6526365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39374,4 +39329,3 @@ SceneRoots:
   - {fileID: 97833856}
   - {fileID: 2097167585}
   - {fileID: 520068590}
-  - {fileID: 852906783}

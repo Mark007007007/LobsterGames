@@ -9,11 +9,15 @@ public class ForkLiftInputManager : MonoBehaviour
     [SerializeField] private Forklift _forklift;
     void Start()
     {
+        InitializeInputs();
+    }
+
+    private void InitializeInputs()
+    {
         _input = new AllInputActions();
         _input.Forklift.Enable();
         _input.Forklift.GetOutOfForklift.performed += GetOutOfForkLift_performed;
     }
-
     private void GetOutOfForkLift_performed(InputAction.CallbackContext context)
     {
         _forklift.ExitDriveMode();

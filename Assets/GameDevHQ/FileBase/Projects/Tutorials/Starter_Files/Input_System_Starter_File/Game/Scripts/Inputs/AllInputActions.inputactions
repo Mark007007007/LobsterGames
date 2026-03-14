@@ -183,8 +183,30 @@
                 },
                 {
                     "name": "",
+                    "id": "c4d8d754-91fc-4d5e-8547-de5e6b311689",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d991c992-4e47-43b9-bc65-de4c49ac53dd",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractableEvent",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df02351d-9452-4b15-905e-04304d10686f",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -205,8 +227,30 @@
                 },
                 {
                     "name": "",
+                    "id": "69f7a77d-83a1-462b-af3f-8ae67e2e89e6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HackCameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "150e07f5-7a60-49a7-a341-190fede9e4d4",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlowUpTaxi",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8819f47-1336-44ad-97e9-618bf741018d",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -227,6 +271,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b24f643a-02ca-4777-8d66-551b49c1768a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "95a2a3ca-ded5-4a09-b8cf-cea8372011e0",
                     "path": "<Keyboard>/h",
                     "interactions": "",
@@ -238,8 +293,30 @@
                 },
                 {
                     "name": "",
+                    "id": "0c82c15f-1a21-458a-8971-cee0e7125aec",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DroneState",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dd35640b-69d1-4862-96a8-7b8199eedb45",
                     "path": "<Keyboard>/e",
+                    "interactions": "Hold(duration=3)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BrakeCrate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37ae32d2-c5f8-407b-bfac-2bfb4bfcf30c",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "Hold(duration=3)",
                     "processors": "",
                     "groups": "",
@@ -323,6 +400,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "acf52942-5e8e-4817-baca-21233de07402",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerState",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WASD",
                     "id": "f247c87b-6cd7-4836-8b22-d77396663a76",
                     "path": "2DVector",
@@ -378,6 +466,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "24cb7bf0-8baa-4903-9773-b28112bdb069",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TiltDrone",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "82007ca3-5ca1-42e3-ad40-32402b802095",
                     "path": "1DAxis",
@@ -411,6 +510,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "5319393e-336c-4e83-b852-3e838c19a6e6",
+                    "path": "<Gamepad>/rightStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "5b828ffd-7f6e-4ca1-8229-7f01ef09fad9",
                     "path": "1DAxis",
@@ -442,6 +552,17 @@
                     "action": "Thrust",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2187a473-c3a0-482d-901a-6f3b26e0dad1",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -601,8 +722,30 @@
                 },
                 {
                     "name": "",
+                    "id": "cc350473-81af-4e2a-a4c1-9865d6ea25a6",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f5725b2c-c47e-404b-912a-09e40d0aaf9f",
                     "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GetOutOfForklift",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abbc70a0-efdb-4941-b78e-bcb593bdde60",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -642,6 +785,109 @@
                     "action": "LiftControl",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "8b1761ee-17ad-4ca2-9137-8b0b1a0cd468",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LiftControl",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "38908e12-16e8-432f-ac4f-450c8681aba1",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LiftControl",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "527eaf1b-d9e2-49b2-919e-ab500d0c690d",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LiftControl",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Laptop",
+            "id": "7077b698-e546-428c-ba71-14578d3ff487",
+            "actions": [
+                {
+                    "name": "SwitchCamreras",
+                    "type": "Button",
+                    "id": "eed46a93-bd17-4c62-a217-6110d39d8a02",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StopUsingCameras",
+                    "type": "Button",
+                    "id": "af4aba63-7729-4375-86f7-7969024482a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f45f9a62-2ed1-4144-8634-910f6bf8fbbf",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchCamreras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4dcb1ae6-6321-4d91-923e-164845ee50cd",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchCamreras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48e94572-7cf4-48d5-a69c-3e8d390359f1",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StopUsingCameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd6321f2-e88b-4f6b-9593-c312781f1cd9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StopUsingCameras",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

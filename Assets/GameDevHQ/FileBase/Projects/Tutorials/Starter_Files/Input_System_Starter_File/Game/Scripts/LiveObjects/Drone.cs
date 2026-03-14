@@ -42,22 +42,6 @@ namespace Game.Scripts.LiveObjects
             InteractableZone.onZoneInteractionComplete += EnterFlightMode1stTime;
         }
 
-        // LEGACY INPUT MANAGER
-        // private void EnterFlightMode(InteractableZone zone)
-        // {
-        //     if (_inFlightMode != true && zone.GetZoneID() == 4) // drone Scene
-        //     {
-        //         _propAnim.SetTrigger("StartProps");
-        //         _droneCam.Priority = 11;
-        //         _inFlightMode = true;
-        //         OnEnterFlightMode?.Invoke();
-        //         UIManager.Instance.DroneView(true);// escape
-        //         _interactableZone.CompleteTask(4);
-        //         _isDroneAccessible = true;
-        //     }
-        // }
-
-        // CHANGED AFTER NEW INPUT MANAGER
         private void EnterFlightMode1stTime(InteractableZone zone)
         {
             if (_inFlightMode != true && zone.GetZoneID() == 4) // drone Scene
@@ -72,8 +56,8 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        // NEW INPUT MANAGER
-        public void EnterFlightMode()
+        // FOR NEW INPUT SYSTEM
+        public void EnterFlightMode()// ADDED
         {
             if (_isDroneAccessible)
             {
@@ -86,8 +70,7 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        // NEW INPUT MANAGER
-        public void ExitFlightMode()
+        public void ExitFlightMode()// CHANGED
         {            
             if (_beenInDroneState == false)
             {
@@ -99,8 +82,7 @@ namespace Game.Scripts.LiveObjects
             UIManager.Instance.DroneView(false);            
         }
 
-        // CHANGED AFTER NEW INPUT MANAGER
-        public void EscapeFlightMode()
+        public void EscapeFlightMode()// CHANGED
         {
             if (_inFlightMode)
             {
@@ -121,7 +103,7 @@ namespace Game.Scripts.LiveObjects
             //     CalculateMovementFixedUpdate();// THESE LINES ARE REMOVED
         }
         
-        // LEGACY INPUT MANAGER
+        // LEGACY INPUT SYSTEM // BEFORE
         // private void CalculateMovementUpdate()
         // {
         //     if (Input.GetKey(KeyCode.LeftArrow))
@@ -138,15 +120,18 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
-        // NEW INPUT MANAGER
-        public void CalculateMovementUpdate(float direction)
+        // FOR NEW INPUT SYSTEM // AFTER
+        public void CalculateMovementUpdate(float direction) // CHANGED
         {
-            var tempRot = transform.localRotation.eulerAngles;
-                tempRot.y += direction * _turningSpeed * Time.deltaTime;
-                transform.localRotation = Quaternion.Euler(tempRot);
+            if (_inFlightMode)
+            {
+                var tempRot = transform.localRotation.eulerAngles;
+                    tempRot.y += direction * _turningSpeed * Time.deltaTime;
+                    transform.localRotation = Quaternion.Euler(tempRot);
+            }
         }
 
-        // LEGACY INPUT MANAGER
+        // LEGACY INPUT SYSTEM // BEFORE
         // private void CalculateMovementFixedUpdate()
         // {
             
@@ -160,7 +145,7 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
-        // NEW INPUT MANAGER
+        // FOR NEW INPUT SYSTEM // AFTER
         public void Thrust(float verticalDirection)
         {
             
@@ -170,7 +155,7 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        // LEGACY INPUT MANAGER
+        // LEGACY INPUT SYSTEM // BEFORE
         // private void CalculateTilt()
         // {
         //     if (Input.GetKey(KeyCode.A)) 
@@ -185,10 +170,13 @@ namespace Game.Scripts.LiveObjects
         //         transform.rotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, 0);
         // }
 
-        // NEW INPUT MANAGER
+        // FOR NEW INPUT SYSTEM // AFTER
         public void TiltDrone(Vector2 tilt)
         {
-            transform.rotation = Quaternion.Euler(tilt.y * _rotationSpeed, transform.localRotation.eulerAngles.y, tilt.x * _rotationSpeed * -1);
+            if (_inFlightMode)
+            {
+                transform.rotation = Quaternion.Euler(tilt.y * _rotationSpeed, transform.localRotation.eulerAngles.y, tilt.x * _rotationSpeed * -1);
+            }
         }
 
         private void OnDisable()

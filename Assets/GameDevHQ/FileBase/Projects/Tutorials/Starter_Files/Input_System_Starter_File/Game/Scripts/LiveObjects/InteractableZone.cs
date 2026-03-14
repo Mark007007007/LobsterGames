@@ -70,6 +70,11 @@ namespace Game.Scripts.LiveObjects
         // NEW INPUT SYSTEM
         void Start()
         {
+            InitializeInputs();
+        }
+
+        private void InitializeInputs()
+        {
             _input = new AllInputActions();
             _input.Player.Enable();
             if (_zoneID == 6)
@@ -80,7 +85,7 @@ namespace Game.Scripts.LiveObjects
             }
             if (_zoneID == 2)
             {
-                _input.Player.BlowUpTaxi.performed += InteractableEvent_performed;// debug
+                _input.Player.BlowUpTaxi.performed += InteractableEvent_performed;
                 return;
             }
             _input.Player.InteractableEvent.performed += InteractableEvent_performed;
@@ -98,8 +103,7 @@ namespace Game.Scripts.LiveObjects
         }
         private void OnEnable()
         {
-            InteractableZone.onZoneInteractionComplete += SetMarker;
-
+            InteractableZone.onZoneInteractionComplete += SetMarker;//
         }
 
         private void BrakeCrate_performed(InputAction.CallbackContext context)// ADDED
@@ -221,8 +225,8 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
-        // CHANGES
-        public void StartInteractableAction()
+        // FOR NEW INPUT SYSTEM
+        public void StartInteractableAction() // CHANGED
         {
             if (_inZone == true)
             {
@@ -248,8 +252,8 @@ namespace Game.Scripts.LiveObjects
                     }
             }
         }
-        // CHANGES
-        public void StartInteractableActionByHolding()
+        // FOR NEW INPUT SYSTEM
+        public void StartInteractableActionByHolding() // CHANGED
         {
             if (_inZone == true)
             {
@@ -349,8 +353,7 @@ namespace Game.Scripts.LiveObjects
                 _input.Player.Disable();
             }
         }
-        // CHANGES
-        private void OnDestroy()
+        private void OnDestroy()// ADDED
         {
             if (_input != null)
             {

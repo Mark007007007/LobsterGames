@@ -69,7 +69,7 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
-        // lEGACY INPUT SYSTEM
+        // lEGACY INPUT SYSTEM // BEFORE
         // private void CalcutateMovement()
         // {
         //     float h = Input.GetAxisRaw("Horizontal");
@@ -87,6 +87,7 @@ namespace Game.Scripts.LiveObjects
         //     }
         // }
 
+        // FOR NEW INPUT SYSTEM // AFTER
         public void CalcutateMovement(float x, float y)// CHANGED
         {
             if (_inDriveMode == false)
@@ -108,7 +109,7 @@ namespace Game.Scripts.LiveObjects
             }
         }
 
-        // lEGACY INPUT SYSTEM
+        // lEGACY INPUT SYSTEM // BEFORE
         // private void LiftControls()
         // {
         //     if (Input.GetKey(KeyCode.R))
@@ -117,6 +118,7 @@ namespace Game.Scripts.LiveObjects
         //         LiftDownRoutine();
         // }
 
+        // FOR NEW INPUT SYSTEM // AFTER
         public void LiftControls(float lift)// CHANGED
         {
             if (_inDriveMode == false)
@@ -141,7 +143,7 @@ namespace Game.Scripts.LiveObjects
         }
 
         // lEGACY INPUT SYSTEM
-        // private void LiftUpRoutine()
+        // private void LiftUpRoutine() // REMOVED
         // {
         //     if (_lift.transform.localPosition.y < _liftUpperLimit.y)
         //     {
@@ -154,7 +156,7 @@ namespace Game.Scripts.LiveObjects
         // }
 
         // lEGACY INPUT SYSTEM
-        // private void LiftDownRoutine()
+        // private void LiftDownRoutine() // REMOVED
         // {
         //     if (_lift.transform.localPosition.y > _liftLowerLimit.y)
         //     {

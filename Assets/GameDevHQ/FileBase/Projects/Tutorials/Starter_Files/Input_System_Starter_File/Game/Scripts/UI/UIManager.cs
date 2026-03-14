@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +32,7 @@ namespace Game.Scripts.UI
 
         private void Awake()
         {
-            _instance = this;
+            _instance = this;//input
         }
 
         public void DisplayInteractableZoneMessage(bool showMessage, string message = null)
@@ -62,7 +61,7 @@ namespace Game.Scripts.UI
         // ADDED
         IEnumerator DisableDroneSwitch_UI()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(9f);
             _droneSwitch_UI.gameObject.SetActive(false);
         }
 

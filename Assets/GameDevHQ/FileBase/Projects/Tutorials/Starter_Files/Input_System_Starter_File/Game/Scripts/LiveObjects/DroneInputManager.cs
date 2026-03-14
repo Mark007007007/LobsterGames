@@ -8,6 +8,11 @@ public class DroneInputManager : MonoBehaviour// NEW INPUT SYSTEM
     [SerializeField] private Drone _drone;
     void Start()
     {
+        InitializeInputs();
+    }
+
+    private void InitializeInputs()
+    {
         _input = new AllInputActions();
         _input.Drone.Enable();
         _input.Drone.PlayerState.performed += PlayerState_performed;
